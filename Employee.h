@@ -5,19 +5,15 @@
 
 class Employee {
 public:
-    Employee(std::string name,std::string last_name,std::string role,long cpf,float salary);
+    Employee(std::string name,std::string last_name,std::string role,int age,float salary,int id);
     Employee() = default;
     ~Employee() = default;
     std::string GetName();
-    void SetName(std::string name);
     std::string GetLastName();
-    void SetLastName(std::string last_name);
     std::string GetRole();
-    void SetRole(std::string role);
-    long GetCpf();
-    void SetCpf(long cpf);
+    int GetAge();
     float GetSalary();
-    void SetSalary(float salary);
+    int GetId();
 
     void PrintEmployee();
     
@@ -25,6 +21,8 @@ private:
     std::string name_ = "";
     std::string last_name_ = "";
     std::string role_ = "";
-    long cpf_ = 0;
+    int age_ = 0;
     float salary_ = 0;
+    int id_ = 0;
+
 };
